@@ -3,6 +3,7 @@ import time
 from psycopg2 import OperationalError as Psycopg2Error
 from django.db.utils import OperationalError
 
+
 class Command(BaseCommand):
     def handle(self, *args, **options):
         self.stdout.write("Waiting for db")
@@ -16,5 +17,3 @@ class Command(BaseCommand):
                 time.sleep(1)
 
         self.stdout.write(self.style.SUCCESS('db ready'))
-
-
