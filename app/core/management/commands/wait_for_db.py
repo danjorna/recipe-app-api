@@ -15,6 +15,6 @@ class Command(BaseCommand):
                 self.stdout.write('DB unavailable, waiting on second')
                 time.sleep(1)
 
-            self.stdout.write(self.style.SUCCESS('db ready'))
+        self.stdout.write(self.style.SUCCESS('db ready'))
 
 
