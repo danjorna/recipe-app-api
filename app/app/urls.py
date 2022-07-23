@@ -1,5 +1,4 @@
 """app URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
 Examples:
@@ -29,5 +28,5 @@ urlpatterns = [
         SpectacularSwaggerView.as_view(url_name='api-schema'),
         name='api-docs',
     ),
-    path('api/user', include('user.urls')),
+    path('api/user/', include('user.urls')),
 ]
